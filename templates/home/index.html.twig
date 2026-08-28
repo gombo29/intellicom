@@ -1,0 +1,191 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<header class="site-header">
+  <div class="container inner">
+    <a href="#top"><img src="{{ asset('assets/img/logo.png') }}" alt="IntelliCom"></a>
+    <nav class="site-nav">
+      <a href="#services">Үйлчилгээ</a>
+      <a href="#erp">ERP шийдэл</a>
+      <a href="#about">Бидний тухай</a>
+      <a href="#partners">Түншлэл</a>
+      <a href="#contact" class="cta">Холбоо барих</a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" class="hero">
+  <div class="hero-pattern"></div>
+  <div class="container inner">
+    <div data-reveal>
+      <h1>Таны бүтээмжийг нэмэгдүүлэх технологийн цогц шийдэл</h1>
+      <p class="lede">Интелликом ХХК нь мэдээллийн технологи, харилцаа холбооны дэд бүтэц, системийн интеграцчлал болон Odoo суурьтай ERP системийн хөгжүүлэлтийн чиглэлээр байгууллагуудад цогц шийдэл үзүүлдэг компани юм.</p>
+      <div class="btn-row">
+        <a href="#contact" class="btn btn-primary">Төслөө хамт эхлүүлэх</a>
+        <a href="#services" class="btn btn-ghost">Үйлчилгээг үзэх</a>
+      </div>
+    </div>
+    <div class="orbital" data-reveal>
+      <div class="orbital-glow"></div>
+      <div class="ring ring-outer">
+        <div class="pos-top"><div class="chip"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><ellipse cx="10" cy="5" rx="6.5" ry="2.8" stroke="#7fd3e4" stroke-width="1.4"/><line x1="3.5" y1="5" x2="3.5" y2="15" stroke="#7fd3e4" stroke-width="1.4"/><line x1="16.5" y1="5" x2="16.5" y2="15" stroke="#7fd3e4" stroke-width="1.4"/><ellipse cx="10" cy="15" rx="6.5" ry="2.8" stroke="#7fd3e4" stroke-width="1.4"/></svg></div></div>
+        <div class="pos-right"><div class="chip"><svg width="16" height="16" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" fill="#7fd3e4"/><rect x="11" y="2" width="7" height="7" fill="#7fd3e4" opacity=".65"/><rect x="2" y="11" width="7" height="7" fill="#7fd3e4" opacity=".65"/><rect x="11" y="11" width="7" height="7" fill="#7fd3e4"/></svg></div></div>
+        <div class="pos-bottom"><div class="chip"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="4.5" r="2.6" stroke="#7fd3e4" stroke-width="1.4"/><circle cx="4.5" cy="15" r="2.6" stroke="#7fd3e4" stroke-width="1.4"/><circle cx="15.5" cy="15" r="2.6" stroke="#7fd3e4" stroke-width="1.4"/><line x1="8.7" y1="6.8" x2="5.6" y2="12.8" stroke="#7fd3e4" stroke-width="1.4"/><line x1="11.3" y1="6.8" x2="14.4" y2="12.8" stroke="#7fd3e4" stroke-width="1.4"/><line x1="7.1" y1="15" x2="12.9" y2="15" stroke="#7fd3e4" stroke-width="1.4"/></svg></div></div>
+        <div class="pos-left"><div class="chip"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="12" height="7" rx="1.5" stroke="#7fd3e4" stroke-width="1.4"/><circle cx="8" cy="8.5" r="2" stroke="#7fd3e4" stroke-width="1.3"/><line x1="14" y1="7.5" x2="18" y2="6" stroke="#7fd3e4" stroke-width="1.4"/><line x1="14" y1="9.5" x2="18" y2="11" stroke="#7fd3e4" stroke-width="1.4"/><line x1="6" y1="12" x2="6" y2="16" stroke="#7fd3e4" stroke-width="1.4"/></svg></div></div>
+        <div class="pos-tr"><div class="chip"><svg width="17" height="17" viewBox="0 0 20 20" fill="none"><rect x="4" y="9" width="12" height="8" rx="1.5" stroke="#7fd3e4" stroke-width="1.4"/><circle cx="10" cy="6" r="3.6" stroke="#7fd3e4" stroke-width="1.4" fill="#0a2947"/><circle cx="10" cy="13" r="1.4" fill="#7fd3e4"/></svg></div></div>
+        <div class="pos-tl"><div class="chip"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="8" cy="10" r="4.4" stroke="#7fd3e4" stroke-width="1.4"/><circle cx="13.2" cy="11.4" r="3.1" stroke="#7fd3e4" stroke-width="1.4"/><line x1="6" y1="14.4" x2="15.5" y2="14.4" stroke="#7fd3e4" stroke-width="1.4"/></svg></div></div>
+        <div class="pos-br"><div class="chip"><svg width="17" height="17" viewBox="0 0 20 20" fill="none"><rect x="5" y="5" width="10" height="10" rx="1.5" stroke="#7fd3e4" stroke-width="1.4"/><rect x="8" y="8" width="4" height="4" fill="#7fd3e4"/><line x1="7" y1="5" x2="7" y2="2" stroke="#7fd3e4" stroke-width="1.3"/><line x1="10" y1="5" x2="10" y2="2" stroke="#7fd3e4" stroke-width="1.3"/><line x1="13" y1="5" x2="13" y2="2" stroke="#7fd3e4" stroke-width="1.3"/><line x1="7" y1="18" x2="7" y2="15" stroke="#7fd3e4" stroke-width="1.3"/><line x1="10" y1="18" x2="10" y2="15" stroke="#7fd3e4" stroke-width="1.3"/><line x1="13" y1="18" x2="13" y2="15" stroke="#7fd3e4" stroke-width="1.3"/><line x1="5" y1="7" x2="2" y2="7" stroke="#7fd3e4" stroke-width="1.3"/><line x1="5" y1="10" x2="2" y2="10" stroke="#7fd3e4" stroke-width="1.3"/><line x1="5" y1="13" x2="2" y2="13" stroke="#7fd3e4" stroke-width="1.3"/><line x1="15" y1="7" x2="18" y2="7" stroke="#7fd3e4" stroke-width="1.3"/><line x1="15" y1="10" x2="18" y2="10" stroke="#7fd3e4" stroke-width="1.3"/><line x1="15" y1="13" x2="18" y2="13" stroke="#7fd3e4" stroke-width="1.3"/></svg></div></div>
+      </div>
+      <div class="ring ring-inner">
+        <div class="pos-inner-tr"><div class="chip"><svg width="16" height="16" viewBox="0 0 20 20" fill="none"><circle cx="8" cy="10" r="4.2" stroke="#7fd3e4" stroke-width="1.4"/><circle cx="13" cy="11.5" r="3" stroke="#7fd3e4" stroke-width="1.4"/><line x1="6" y1="14.2" x2="15" y2="14.2" stroke="#7fd3e4" stroke-width="1.4"/></svg></div></div>
+        <div class="pos-inner-bl"><div class="chip"><svg width="16" height="16" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="9" rx="1.5" stroke="#7fd3e4" stroke-width="1.4"/><line x1="10" y1="12" x2="10" y2="16" stroke="#7fd3e4" stroke-width="1.4"/><line x1="6" y1="16.3" x2="14" y2="16.3" stroke="#7fd3e4" stroke-width="1.4"/></svg></div></div>
+        <div class="ring-dot"></div>
+      </div>
+      <div class="orbital-center">
+        <img src="{{ asset('assets/img/logo.png') }}" alt="IntelliCom">
+      </div>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="container inner">
+      <div data-reveal><div class="stat-num" data-count="20" data-suffix="+">20+</div><div class="stat-label">Жилийн туршлага</div></div>
+      <div data-reveal><div class="stat-num" data-count="15" data-suffix="+">15+</div><div class="stat-label">Мэргэжлийн баг</div></div>
+      <div data-reveal><div class="stat-num"><span class="odoo-wordmark" style="font-size:34px">odoo</span></div><div class="stat-label">Ready Partner статустай</div></div>
+      <div data-reveal><div class="stat-num" style="gap:9px"><span class="ms-squares"><span></span><span></span><span></span><span></span></span><span style="font-family:Montserrat,sans-serif;font-weight:700;font-size:21px;color:#fff">Microsoft 365</span></div><div class="stat-label">Лицензийн албан ёсны эрхтэй</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section-light">
+  <div class="container">
+    <div class="eyebrow">ҮЙЛЧИЛГЭЭ</div>
+    <div class="services-head" data-reveal>
+      <h2 class="section-title" style="max-width:560px">Дэд бүтцээс программ хангамж хүртэл — нэг түншээс</h2>
+      <p>Сүлжээ, харилцаа холбоо, аюулгүй байдал, бизнесийн системийг нэг дор төлөвлөж, суурилуулж, дэмжинэ.</p>
+    </div>
+    <div class="services-grid">
+      {% for s in services %}
+      <div class="service-card" data-reveal>
+        <div class="service-num">{{ s.num }}</div>
+        <div class="service-title">{{ s.title }}</div>
+        <div class="service-desc">{{ s.desc }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="erp" class="section-dark">
+  <div class="hero-pattern" style="animation:none"></div>
+  <div class="container erp-grid">
+    <div data-reveal>
+      <div class="eyebrow">БИЗНЕС СИСТЕМ</div>
+      <h2 class="section-title" style="margin-bottom:18px">Odoo ERP суурьтай хөгжүүлэлт, нэвтрүүлэлт</h2>
+      <p class="lede">Бид Odoo-гийн Ready Partner статустай бөгөөд байгууллагын санхүү, худалдан авалт, агуулах, борлуулалт, хүний нөөцийн процессыг нэг системд нэгтгэн хөгжүүлж, нэвтрүүлдэг.</p>
+      <div class="feature-list">
+        <div><span class="bullet"></span><span>Бизнес процессын судалгаа, зөвлөх үйлчилгээ</span></div>
+        <div><span class="bullet"></span><span>Модулийн тохируулга, нэмэлт хөгжүүлэлт, интеграци</span></div>
+        <div><span class="bullet"></span><span>Сургалт, нэвтрүүлэлтийн дараах тасралтгүй дэмжлэг</span></div>
+      </div>
+      <div class="odoo-badge"><span class="wordmark">odoo</span><span class="label">Ready Partner</span></div>
+    </div>
+    <div data-reveal>
+      <div class="list-label">ERP НЭВТРҮҮЛСЭН БАЙГУУЛЛАГУУД</div>
+      <div class="client-list">
+        {% for c in erpClients %}
+        <div class="client-card">
+          <div class="name">{{ c.name }}</div>
+          <div class="desc">{{ c.desc }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section-white">
+  <div class="container about-grid">
+    <div class="about-photos" data-reveal>
+      <div class="photo-slot wide"><span class="hint">багийн зураг</span></div>
+      <div class="photo-slot"><span class="hint">сүлжээний дэд бүтэц</span></div>
+      <div class="photo-slot"><span class="hint">серверийн өрөө</span></div>
+    </div>
+    <div class="about-text" data-reveal>
+      <div class="eyebrow">БИДНИЙ ТУХАЙ</div>
+      <h2 class="section-title" style="margin-bottom:18px">Хөгжилд хөтөлнө</h2>
+      <p>Интелликом ХХК нь 20 гаруй жилийн турш дотоод, гадаад сүлжээний шийдэл, харилцаа холбооны тоног төхөөрөмжийн нийлүүлэлт, суурилуулалт, программ хангамжийн хөгжүүлэлтийн чиглэлээр үйл ажиллагаа явуулж байна.</p>
+      <p>Бид мэдээллийн технологийн оновчтой, үр ашигтай шийдлийг хэрэгжүүлж, ажилтан бүрийн амьдралын чанар, бүтээмжийг дээшлүүлж, хөрөнгө оруулалтын өгөөжийг нэмэгдүүлнэ.</p>
+      <div class="values-grid">
+        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><circle cx="6.5" cy="7" r="3.5" stroke="#1a9ab5" stroke-width="1.5"/><circle cx="13.5" cy="7" r="3.5" stroke="#1a9ab5" stroke-width="1.5"/><polygon points="10,10 6.5,10.5 10,16.5 13.5,10.5" fill="#1a9ab5" opacity=".9"/></svg>Хүндэтгэлтэй</div>
+        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><polygon points="10,2.5 16.5,5 16.5,10 10,17.5 3.5,10 3.5,5" stroke="#1a9ab5" stroke-width="1.5" fill="none"/><polyline points="7,9.5 9.2,11.8 13.2,7.5" stroke="#1a9ab5" stroke-width="1.5" fill="none"/></svg>Үнэнч шударга</div>
+        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><polygon points="10,2 12,8 18,10 12,12 10,18 8,12 2,10 8,8" stroke="#1a9ab5" stroke-width="1.5" fill="none"/><circle cx="10" cy="10" r="1.4" fill="#1a9ab5"/></svg>Бүтээлч</div>
+        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="#1a9ab5" stroke-width="1.5"/><polyline points="6.5,10 9,12.6 13.7,7.3" stroke="#1a9ab5" stroke-width="1.5" fill="none"/></svg>Хариуцлагатай</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container">
+    <div class="eyebrow">ТҮҮХЭН ЗАМНАЛ</div>
+    <h2 class="section-title">Туршлагаар батлагдсан замнал</h2>
+    <div class="timeline-grid">
+      {% for m in milestones %}
+      <div class="milestone" data-reveal>
+        <div class="year">{{ m.year }}</div>
+        <div class="text">{{ m.text }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="partners" class="partners">
+  <div class="container">
+    <div class="eyebrow">ТҮНШЛЭЛ, АЛБАН ЁСНЫ ЭРХ</div>
+    <div class="partner-row" data-reveal>
+      <div class="partner-pill"><span class="wordmark">odoo</span><span class="label">Ready Partner</span></div>
+      <div class="partner-pill"><span class="ms">Microsoft 365</span><span class="label">Лицензийн албан ёсны эрх</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container inner">
+    <div data-reveal>
+      <h2>Төслөө өнөөдрөөс эхлүүлье</h2>
+      <p class="lede">Танай байгууллагын хэрэгцээг үнэлж, эхний зөвлөгөө, санал болголтыг үнэ төлбөргүй хүргэнэ.</p>
+      <div class="btn-row">
+        <a href="mailto:info@intellicom.mn" class="btn btn-primary">И-мэйл илгээх</a>
+        <a href="tel:+97670000000" class="btn btn-ghost">Шууд залгах</a>
+      </div>
+    </div>
+    <div class="contact-cards" data-reveal>
+      <div class="contact-card">
+        <div class="label">ХАЯГ</div>
+        <div class="value">Улаанбаатар хот, Сүхбаатар дүүрэг, 3-р хороо,<br>Алтан жолоо тауэр, 11 давхар</div>
+      </div>
+      <div class="contact-pair">
+        <div class="contact-card">
+          <div class="label">И-МЭЙЛ</div>
+          <div class="value">info@intellicom.mn</div>
+        </div>
+        <div class="contact-card">
+          <div class="label">УТАС</div>
+          <div class="value">+976 7000-0000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container inner">
+    <div class="brand">
+      <img src="{{ asset('assets/img/logo.png') }}" alt="IntelliCom">
+      <span>© {{ 'now'|date('Y') }} Интелликом ХХК. Бүх эрх хуулиар хамгаалагдсан.</span>
+    </div>
+    <div class="slogan">«Хөгжилд хөтөлнө»</div>
+  </div>
+</footer>
+{% endblock %}
