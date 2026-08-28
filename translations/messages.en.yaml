@@ -2,8 +2,8 @@
 site:
     title: 'Intellicom LLC'
     company: 'Intellicom LLC'
-    slogan: 'Leading the way forward'
     copyright: '© %year% Intellicom LLC. All rights reserved.'
+    description: 'Intellicom LLC — complete solutions in information technology, telecommunications infrastructure, systems integration and Odoo-based ERP.'
 
 nav:
     services: 'Services'
@@ -120,5 +120,4 @@ contact:
     cta_call: 'Call us now'
     label_address: 'ADDRESS'
     label_email: 'EMAIL'
-    label_phone: 'PHONE'
     address: '11th floor, Altan Joloo Tower,<br>3rd khoroo, Sukhbaatar District,<br>Ulaanbaatar, Mongolia'

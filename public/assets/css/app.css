@@ -61,7 +61,7 @@ a:hover { color: var(--teal-light); }
 .hero-pattern { position: absolute; inset: 0; background-image: radial-gradient(rgba(87,194,216,.14) 1px, transparent 1px); background-size: 26px 26px; pointer-events: none; animation: drift 14s linear infinite; }
 .hero .inner { position: relative; padding: 88px 24px 72px; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; align-items: center; }
 .hero h1 {
-  font-family: var(--font-display); font-weight: 800;
+  font-family: var(--font-display); font-weight: 500;
   font-size: clamp(30px, 4.4vw, 50px); line-height: 1.16; letter-spacing: -.021em;
   margin: 0 0 20px; text-wrap: balance; max-width: 15ch;
 }
@@ -90,9 +90,13 @@ a:hover { color: var(--teal-light); }
 .pos-tr { top: 41px; right: 41px; }
 .pos-tl { top: 41px; left: 41px; }
 .pos-br { bottom: 41px; right: 41px; }
-.pos-inner-tr { top: 18px; right: 18px; }
-.pos-inner-bl { bottom: 18px; left: 18px; }
-.ring-dot { position: absolute; top: 50%; left: -4px; width: 8px; height: 8px; border-radius: 50%; background: var(--teal-light); box-shadow: 0 0 12px var(--teal-light); }
+/* Дотор цагирагийн 5 icon — 310px цагирагийн шугам дээр 72°-аар тэнцүү байрлана. */
+.pos-inner-1 { top: 28px; left: 248px; }
+.pos-inner-2 { top: 0; left: 68px; }
+.pos-inner-3 { top: 162px; left: -15px; }
+.pos-inner-4 { top: 291px; left: 114px; }
+.pos-inner-5 { top: 208px; left: 276px; }
+.ring-dot { position: absolute; top: -4px; left: 50%; margin-left: -4px; width: 8px; height: 8px; border-radius: 50%; background: var(--teal-light); box-shadow: 0 0 12px var(--teal-light); }
 .orbital-center { position: relative; width: 220px; height: 220px; display: flex; align-items: center; justify-content: center; }
 .orbital-center img { width: 185px; display: block; filter: brightness(1.5) drop-shadow(0 0 18px rgba(87,194,216,.5)); }
 
@@ -181,14 +185,12 @@ h2.section-title { font-family: Montserrat, sans-serif; font-weight: 800; font-s
 .contact-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 12px; padding: 20px 22px; }
 .contact-card .label { font-size: 12.5px; color: #7fa2c0; font-weight: 600; letter-spacing: .06em; margin-bottom: 6px; }
 .contact-card .value { font-size: 15px; line-height: 1.55; }
-.contact-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 
 /* Footer */
 .site-footer { background: var(--navy-1); color: #7fa2c0; border-top: 1px solid rgba(255,255,255,.08); }
 .site-footer .inner { padding: 28px 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; font-size: 13.5px; }
 .site-footer .brand { display: flex; align-items: center; gap: 14px; }
 .site-footer img { height: 30px; filter: brightness(1.4); }
-.site-footer .slogan { font-style: italic; }
 
 /* Responsive */
 @media (max-width: 960px) {
@@ -199,6 +201,6 @@ h2.section-title { font-family: Montserrat, sans-serif; font-weight: 800; font-s
   .hero h1 { max-width: 22ch; }
 }
 @media (max-width: 560px) {
-  .services-grid, .timeline-grid, .values-grid, .contact-pair { grid-template-columns: 1fr; }
+  .services-grid, .timeline-grid, .values-grid { grid-template-columns: 1fr; }
   .site-nav a:not(.cta):not(.lang-switch) { display: none; }
 }
