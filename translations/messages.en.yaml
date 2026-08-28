@@ -1,0 +1,124 @@
+# Intellicom LLC — English
+site:
+    title: 'Intellicom LLC'
+    company: 'Intellicom LLC'
+    slogan: 'Leading the way forward'
+    copyright: '© %year% Intellicom LLC. All rights reserved.'
+
+nav:
+    services: 'Services'
+    erp: 'ERP Solutions'
+    about: 'About Us'
+    partners: 'Partners'
+    contact: 'Contact'
+    lang_switch: 'МН'
+    lang_switch_title: 'Монгол хэл рүү шилжих'
+
+hero:
+    title: 'End-to-end technology solutions that raise your productivity'
+    lede: 'Intellicom LLC delivers complete solutions in information technology, telecommunications infrastructure, systems integration and Odoo-based ERP development for organisations of every size.'
+    cta_primary: 'Start your project'
+    cta_secondary: 'Explore services'
+
+stats:
+    years: 'Years of experience'
+    team: 'Certified specialists'
+    odoo: 'Ready Partner status'
+    microsoft: 'Authorised licence reseller'
+
+services:
+    eyebrow: 'SERVICES'
+    title: 'From infrastructure to software — from a single partner'
+    lede: 'We plan, deploy and support your networks, communications, security and business systems in one place.'
+    item:
+        1:
+            title: 'LAN & WAN network solutions'
+            desc: 'Design, structuring and installation of LAN/WAN and wireless networks.'
+        2:
+            title: 'Telecommunications equipment'
+            desc: 'Supply, installation, configuration and maintenance of communications hardware.'
+        3:
+            title: 'Odoo ERP development'
+            desc: 'Development, rollout and ongoing support of Odoo-based ERP systems.'
+        4:
+            title: 'Microsoft 365 licensing'
+            desc: 'Authorised O365 licence supply, deployment and configuration.'
+        5:
+            title: 'Video surveillance systems'
+            desc: 'Physical security solutions and full CCTV system installation.'
+        6:
+            title: 'Fire alarm systems'
+            desc: 'Fire detection and alarm systems for commercial and industrial buildings.'
+        7:
+            title: 'IT outsourcing'
+            desc: 'Contracted, continuous IT support services for your organisation.'
+        8:
+            title: 'Web & mobile development'
+            desc: 'Websites and mobile applications built around your business needs.'
+
+erp:
+    eyebrow: 'BUSINESS SYSTEMS'
+    title: 'Odoo ERP development and implementation'
+    lede: 'As an Odoo Ready Partner we unify finance, procurement, warehousing, sales and HR processes into a single system — developed and rolled out end to end.'
+    feature_1: 'Business process analysis and consulting'
+    feature_2: 'Module configuration, custom development and integrations'
+    feature_3: 'Training and continuous post-rollout support'
+    clients_label: 'ORGANISATIONS RUNNING OUR ERP'
+    client:
+        1:
+            name: 'Ochir Undraa LLC'
+            desc: 'Group-wide ERP system'
+        2:
+            name: 'Amid Logistics LLC'
+            desc: 'ERP system for logistics operations'
+        3:
+            name: 'Ogoot LLC'
+            desc: 'ERP system for automotive service operations'
+
+about:
+    eyebrow: 'ABOUT US'
+    title: 'Leading the way forward'
+    p1: 'For more than 20 years Intellicom LLC has worked in LAN and WAN network solutions, the supply and installation of telecommunications equipment, and software development.'
+    p2: 'We implement well-judged, cost-effective IT solutions that improve the quality of working life and the productivity of every employee, and that increase the return on your investment.'
+    photo_team: 'team photo'
+    photo_network: 'network infrastructure'
+    photo_server: 'server room'
+    value_respect: 'Respectful'
+    value_integrity: 'Honest'
+    value_creative: 'Creative'
+    value_responsible: 'Accountable'
+
+timeline:
+    eyebrow: 'OUR JOURNEY'
+    title: 'A track record proven by experience'
+    item:
+        1:
+            year: '2004'
+            text: 'The company is founded and begins work in fibre optics, radio relay links and networking.'
+        2:
+            year: '2007–08'
+            text: 'Installed over 270 km of fibre optic and radio relay lines across Tuv, Selenge, Dornod and Khentii provinces.'
+        3:
+            year: '2014–17'
+            text: 'Delivered complete CCTV, internal network and server solutions across the group companies.'
+        4:
+            year: '2018'
+            text: 'Successfully deployed Microsoft Exchange and Skype for Business.'
+        5:
+            year: '2020+'
+            text: 'Completed the Microsoft 365 rollout and expanded into Odoo ERP development and the AI Doctor service.'
+
+partners:
+    eyebrow: 'PARTNERSHIPS & AUTHORISATIONS'
+    odoo_label: 'Ready Partner'
+    microsoft_label: 'Authorised licence reseller'
+
+contact:
+    title: "Let's start your project today"
+    lede: 'We assess your needs and provide the first consultation and proposal free of charge.'
+    cta_email: 'Send an email'
+    cta_call: 'Call us now'
+    label_address: 'ADDRESS'
+    label_email: 'EMAIL'
+    label_phone: 'PHONE'
+    address: '11th floor, Altan Joloo Tower,<br>3rd khoroo, Sukhbaatar District,<br>Ulaanbaatar, Mongolia'

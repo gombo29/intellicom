@@ -5,11 +5,21 @@
   <div class="container inner">
     <a href="#top"><img src="{{ asset('assets/img/logo.png') }}" alt="IntelliCom"></a>
     <nav class="site-nav">
-      <a href="#services">Үйлчилгээ</a>
-      <a href="#erp">ERP шийдэл</a>
-      <a href="#about">Бидний тухай</a>
-      <a href="#partners">Түншлэл</a>
-      <a href="#contact" class="cta">Холбоо барих</a>
+      <a href="#services">{{ 'nav.services'|trans }}</a>
+      <a href="#erp">{{ 'nav.erp'|trans }}</a>
+      <a href="#about">{{ 'nav.about'|trans }}</a>
+      <a href="#partners">{{ 'nav.partners'|trans }}</a>
+      <a href="#contact" class="cta">{{ 'nav.contact'|trans }}</a>
+      {% set otherLocale = locales|filter(l => l != app.request.locale)|first|default('en') %}
+      <a href="{{ path('app_home', {_locale: otherLocale}) }}" class="lang-switch"
+         title="{{ 'nav.lang_switch_title'|trans }}" hreflang="{{ otherLocale }}">
+        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <circle cx="10" cy="10" r="7.6" stroke="currentColor" stroke-width="1.5"/>
+          <ellipse cx="10" cy="10" rx="3.2" ry="7.6" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="2.7" y1="7.6" x2="17.3" y2="7.6" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="2.7" y1="12.4" x2="17.3" y2="12.4" stroke="currentColor" stroke-width="1.5"/>
+        </svg>{{ 'nav.lang_switch'|trans }}
+      </a>
     </nav>
   </div>
 </header>
@@ -18,11 +28,11 @@
   <div class="hero-pattern"></div>
   <div class="container inner">
     <div data-reveal>
-      <h1>Таны бүтээмжийг нэмэгдүүлэх технологийн цогц шийдэл</h1>
-      <p class="lede">Интелликом ХХК нь мэдээллийн технологи, харилцаа холбооны дэд бүтэц, системийн интеграцчлал болон Odoo суурьтай ERP системийн хөгжүүлэлтийн чиглэлээр байгууллагуудад цогц шийдэл үзүүлдэг компани юм.</p>
+      <h1>{{ 'hero.title'|trans }}</h1>
+      <p class="lede">{{ 'hero.lede'|trans }}</p>
       <div class="btn-row">
-        <a href="#contact" class="btn btn-primary">Төслөө хамт эхлүүлэх</a>
-        <a href="#services" class="btn btn-ghost">Үйлчилгээг үзэх</a>
+        <a href="#contact" class="btn btn-primary">{{ 'hero.cta_primary'|trans }}</a>
+        <a href="#services" class="btn btn-ghost">{{ 'hero.cta_secondary'|trans }}</a>
       </div>
     </div>
     <div class="orbital" data-reveal>
@@ -48,27 +58,27 @@
   </div>
   <div class="stats">
     <div class="container inner">
-      <div data-reveal><div class="stat-num" data-count="20" data-suffix="+">20+</div><div class="stat-label">Жилийн туршлага</div></div>
-      <div data-reveal><div class="stat-num" data-count="15" data-suffix="+">15+</div><div class="stat-label">Мэргэжлийн баг</div></div>
-      <div data-reveal><div class="stat-num"><span class="odoo-wordmark" style="font-size:34px">odoo</span></div><div class="stat-label">Ready Partner статустай</div></div>
-      <div data-reveal><div class="stat-num" style="gap:9px"><span class="ms-squares"><span></span><span></span><span></span><span></span></span><span style="font-family:Montserrat,sans-serif;font-weight:700;font-size:21px;color:#fff">Microsoft 365</span></div><div class="stat-label">Лицензийн албан ёсны эрхтэй</div></div>
+      <div data-reveal><div class="stat-num" data-count="20" data-suffix="+">20+</div><div class="stat-label">{{ 'stats.years'|trans }}</div></div>
+      <div data-reveal><div class="stat-num" data-count="15" data-suffix="+">15+</div><div class="stat-label">{{ 'stats.team'|trans }}</div></div>
+      <div data-reveal><div class="stat-num"><span class="odoo-wordmark" style="font-size:34px">odoo</span></div><div class="stat-label">{{ 'stats.odoo'|trans }}</div></div>
+      <div data-reveal><div class="stat-num" style="gap:9px"><span class="ms-squares"><span></span><span></span><span></span><span></span></span><span style="font-family:Montserrat,sans-serif;font-weight:700;font-size:21px;color:#fff">Microsoft 365</span></div><div class="stat-label">{{ 'stats.microsoft'|trans }}</div></div>
     </div>
   </div>
 </section>
 
 <section id="services" class="section-light">
   <div class="container">
-    <div class="eyebrow">ҮЙЛЧИЛГЭЭ</div>
+    <div class="eyebrow">{{ 'services.eyebrow'|trans }}</div>
     <div class="services-head" data-reveal>
-      <h2 class="section-title" style="max-width:560px">Дэд бүтцээс программ хангамж хүртэл — нэг түншээс</h2>
-      <p>Сүлжээ, харилцаа холбоо, аюулгүй байдал, бизнесийн системийг нэг дор төлөвлөж, суурилуулж, дэмжинэ.</p>
+      <h2 class="section-title" style="max-width:560px">{{ 'services.title'|trans }}</h2>
+      <p>{{ 'services.lede'|trans }}</p>
     </div>
     <div class="services-grid">
-      {% for s in services %}
+      {% for i in services %}
       <div class="service-card" data-reveal>
-        <div class="service-num">{{ s.num }}</div>
-        <div class="service-title">{{ s.title }}</div>
-        <div class="service-desc">{{ s.desc }}</div>
+        <div class="service-num">{{ '%02d'|format(i) }}</div>
+        <div class="service-title">{{ ('services.item.' ~ i ~ '.title')|trans }}</div>
+        <div class="service-desc">{{ ('services.item.' ~ i ~ '.desc')|trans }}</div>
       </div>
       {% endfor %}
     </div>
@@ -79,23 +89,23 @@
   <div class="hero-pattern" style="animation:none"></div>
   <div class="container erp-grid">
     <div data-reveal>
-      <div class="eyebrow">БИЗНЕС СИСТЕМ</div>
-      <h2 class="section-title" style="margin-bottom:18px">Odoo ERP суурьтай хөгжүүлэлт, нэвтрүүлэлт</h2>
-      <p class="lede">Бид Odoo-гийн Ready Partner статустай бөгөөд байгууллагын санхүү, худалдан авалт, агуулах, борлуулалт, хүний нөөцийн процессыг нэг системд нэгтгэн хөгжүүлж, нэвтрүүлдэг.</p>
+      <div class="eyebrow">{{ 'erp.eyebrow'|trans }}</div>
+      <h2 class="section-title" style="margin-bottom:18px">{{ 'erp.title'|trans }}</h2>
+      <p class="lede">{{ 'erp.lede'|trans }}</p>
       <div class="feature-list">
-        <div><span class="bullet"></span><span>Бизнес процессын судалгаа, зөвлөх үйлчилгээ</span></div>
-        <div><span class="bullet"></span><span>Модулийн тохируулга, нэмэлт хөгжүүлэлт, интеграци</span></div>
-        <div><span class="bullet"></span><span>Сургалт, нэвтрүүлэлтийн дараах тасралтгүй дэмжлэг</span></div>
+        <div><span class="bullet"></span><span>{{ 'erp.feature_1'|trans }}</span></div>
+        <div><span class="bullet"></span><span>{{ 'erp.feature_2'|trans }}</span></div>
+        <div><span class="bullet"></span><span>{{ 'erp.feature_3'|trans }}</span></div>
       </div>
       <div class="odoo-badge"><span class="wordmark">odoo</span><span class="label">Ready Partner</span></div>
     </div>
     <div data-reveal>
-      <div class="list-label">ERP НЭВТРҮҮЛСЭН БАЙГУУЛЛАГУУД</div>
+      <div class="list-label">{{ 'erp.clients_label'|trans }}</div>
       <div class="client-list">
-        {% for c in erpClients %}
+        {% for i in erpClients %}
         <div class="client-card">
-          <div class="name">{{ c.name }}</div>
-          <div class="desc">{{ c.desc }}</div>
+          <div class="name">{{ ('erp.client.' ~ i ~ '.name')|trans }}</div>
+          <div class="desc">{{ ('erp.client.' ~ i ~ '.desc')|trans }}</div>
         </div>
         {% endfor %}
       </div>
@@ -106,20 +116,20 @@
 <section id="about" class="section-white">
   <div class="container about-grid">
     <div class="about-photos" data-reveal>
-      <div class="photo-slot wide"><span class="hint">багийн зураг</span></div>
-      <div class="photo-slot"><span class="hint">сүлжээний дэд бүтэц</span></div>
-      <div class="photo-slot"><span class="hint">серверийн өрөө</span></div>
+      <div class="photo-slot wide"><span class="hint">{{ 'about.photo_team'|trans }}</span></div>
+      <div class="photo-slot"><span class="hint">{{ 'about.photo_network'|trans }}</span></div>
+      <div class="photo-slot"><span class="hint">{{ 'about.photo_server'|trans }}</span></div>
     </div>
     <div class="about-text" data-reveal>
-      <div class="eyebrow">БИДНИЙ ТУХАЙ</div>
-      <h2 class="section-title" style="margin-bottom:18px">Хөгжилд хөтөлнө</h2>
-      <p>Интелликом ХХК нь 20 гаруй жилийн турш дотоод, гадаад сүлжээний шийдэл, харилцаа холбооны тоног төхөөрөмжийн нийлүүлэлт, суурилуулалт, программ хангамжийн хөгжүүлэлтийн чиглэлээр үйл ажиллагаа явуулж байна.</p>
-      <p>Бид мэдээллийн технологийн оновчтой, үр ашигтай шийдлийг хэрэгжүүлж, ажилтан бүрийн амьдралын чанар, бүтээмжийг дээшлүүлж, хөрөнгө оруулалтын өгөөжийг нэмэгдүүлнэ.</p>
+      <div class="eyebrow">{{ 'about.eyebrow'|trans }}</div>
+      <h2 class="section-title" style="margin-bottom:18px">{{ 'about.title'|trans }}</h2>
+      <p>{{ 'about.p1'|trans }}</p>
+      <p>{{ 'about.p2'|trans }}</p>
       <div class="values-grid">
-        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><circle cx="6.5" cy="7" r="3.5" stroke="#1a9ab5" stroke-width="1.5"/><circle cx="13.5" cy="7" r="3.5" stroke="#1a9ab5" stroke-width="1.5"/><polygon points="10,10 6.5,10.5 10,16.5 13.5,10.5" fill="#1a9ab5" opacity=".9"/></svg>Хүндэтгэлтэй</div>
-        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><polygon points="10,2.5 16.5,5 16.5,10 10,17.5 3.5,10 3.5,5" stroke="#1a9ab5" stroke-width="1.5" fill="none"/><polyline points="7,9.5 9.2,11.8 13.2,7.5" stroke="#1a9ab5" stroke-width="1.5" fill="none"/></svg>Үнэнч шударга</div>
-        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><polygon points="10,2 12,8 18,10 12,12 10,18 8,12 2,10 8,8" stroke="#1a9ab5" stroke-width="1.5" fill="none"/><circle cx="10" cy="10" r="1.4" fill="#1a9ab5"/></svg>Бүтээлч</div>
-        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="#1a9ab5" stroke-width="1.5"/><polyline points="6.5,10 9,12.6 13.7,7.3" stroke="#1a9ab5" stroke-width="1.5" fill="none"/></svg>Хариуцлагатай</div>
+        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><circle cx="6.5" cy="7" r="3.5" stroke="#1a9ab5" stroke-width="1.5"/><circle cx="13.5" cy="7" r="3.5" stroke="#1a9ab5" stroke-width="1.5"/><polygon points="10,10 6.5,10.5 10,16.5 13.5,10.5" fill="#1a9ab5" opacity=".9"/></svg>{{ 'about.value_respect'|trans }}</div>
+        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><polygon points="10,2.5 16.5,5 16.5,10 10,17.5 3.5,10 3.5,5" stroke="#1a9ab5" stroke-width="1.5" fill="none"/><polyline points="7,9.5 9.2,11.8 13.2,7.5" stroke="#1a9ab5" stroke-width="1.5" fill="none"/></svg>{{ 'about.value_integrity'|trans }}</div>
+        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><polygon points="10,2 12,8 18,10 12,12 10,18 8,12 2,10 8,8" stroke="#1a9ab5" stroke-width="1.5" fill="none"/><circle cx="10" cy="10" r="1.4" fill="#1a9ab5"/></svg>{{ 'about.value_creative'|trans }}</div>
+        <div class="value-chip"><svg width="28" height="28" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="#1a9ab5" stroke-width="1.5"/><polyline points="6.5,10 9,12.6 13.7,7.3" stroke="#1a9ab5" stroke-width="1.5" fill="none"/></svg>{{ 'about.value_responsible'|trans }}</div>
       </div>
     </div>
   </div>
@@ -127,13 +137,13 @@
 
 <section class="section-light">
   <div class="container">
-    <div class="eyebrow">ТҮҮХЭН ЗАМНАЛ</div>
-    <h2 class="section-title">Туршлагаар батлагдсан замнал</h2>
+    <div class="eyebrow">{{ 'timeline.eyebrow'|trans }}</div>
+    <h2 class="section-title">{{ 'timeline.title'|trans }}</h2>
     <div class="timeline-grid">
-      {% for m in milestones %}
+      {% for i in milestones %}
       <div class="milestone" data-reveal>
-        <div class="year">{{ m.year }}</div>
-        <div class="text">{{ m.text }}</div>
+        <div class="year">{{ ('timeline.item.' ~ i ~ '.year')|trans }}</div>
+        <div class="text">{{ ('timeline.item.' ~ i ~ '.text')|trans }}</div>
       </div>
       {% endfor %}
     </div>
@@ -142,10 +152,10 @@
 
 <section id="partners" class="partners">
   <div class="container">
-    <div class="eyebrow">ТҮНШЛЭЛ, АЛБАН ЁСНЫ ЭРХ</div>
+    <div class="eyebrow">{{ 'partners.eyebrow'|trans }}</div>
     <div class="partner-row" data-reveal>
-      <div class="partner-pill"><span class="wordmark">odoo</span><span class="label">Ready Partner</span></div>
-      <div class="partner-pill"><span class="ms">Microsoft 365</span><span class="label">Лицензийн албан ёсны эрх</span></div>
+      <div class="partner-pill"><span class="wordmark">odoo</span><span class="label">{{ 'partners.odoo_label'|trans }}</span></div>
+      <div class="partner-pill"><span class="ms">Microsoft 365</span><span class="label">{{ 'partners.microsoft_label'|trans }}</span></div>
     </div>
   </div>
 </section>
@@ -153,25 +163,25 @@
 <section id="contact" class="contact">
   <div class="container inner">
     <div data-reveal>
-      <h2>Төслөө өнөөдрөөс эхлүүлье</h2>
-      <p class="lede">Танай байгууллагын хэрэгцээг үнэлж, эхний зөвлөгөө, санал болголтыг үнэ төлбөргүй хүргэнэ.</p>
+      <h2>{{ 'contact.title'|trans }}</h2>
+      <p class="lede">{{ 'contact.lede'|trans }}</p>
       <div class="btn-row">
-        <a href="mailto:info@intellicom.mn" class="btn btn-primary">И-мэйл илгээх</a>
-        <a href="tel:+97670000000" class="btn btn-ghost">Шууд залгах</a>
+        <a href="mailto:info@intellicom.mn" class="btn btn-primary">{{ 'contact.cta_email'|trans }}</a>
+        <a href="tel:+97670000000" class="btn btn-ghost">{{ 'contact.cta_call'|trans }}</a>
       </div>
     </div>
     <div class="contact-cards" data-reveal>
       <div class="contact-card">
-        <div class="label">ХАЯГ</div>
-        <div class="value">Улаанбаатар хот, Сүхбаатар дүүрэг, 3-р хороо,<br>Алтан жолоо тауэр, 11 давхар</div>
+        <div class="label">{{ 'contact.label_address'|trans }}</div>
+        <div class="value">{{ 'contact.address'|trans|raw }}</div>
       </div>
       <div class="contact-pair">
         <div class="contact-card">
-          <div class="label">И-МЭЙЛ</div>
+          <div class="label">{{ 'contact.label_email'|trans }}</div>
           <div class="value">info@intellicom.mn</div>
         </div>
         <div class="contact-card">
-          <div class="label">УТАС</div>
+          <div class="label">{{ 'contact.label_phone'|trans }}</div>
           <div class="value">+976 7000-0000</div>
         </div>
       </div>
@@ -183,9 +193,9 @@
   <div class="container inner">
     <div class="brand">
       <img src="{{ asset('assets/img/logo.png') }}" alt="IntelliCom">
-      <span>© {{ 'now'|date('Y') }} Интелликом ХХК. Бүх эрх хуулиар хамгаалагдсан.</span>
+      <span>{{ 'site.copyright'|trans({'%year%': 'now'|date('Y')}) }}</span>
     </div>
-    <div class="slogan">«Хөгжилд хөтөлнө»</div>
+    <div class="slogan">«{{ 'site.slogan'|trans }}»</div>
   </div>
 </footer>
 {% endblock %}
