@@ -192,6 +192,7 @@ h2.section-title { font-family: Montserrat, sans-serif; font-weight: 400; font-s
 .site-footer .inner { padding: 28px 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; font-size: 13.5px; }
 .site-footer .brand { display: flex; align-items: center; gap: 14px; }
 .site-footer img { height: 30px; filter: brightness(1.4); }
+.site-footer .slogan { font-style: italic; color: #9dbcd4; }
 
 /* Responsive */
 @media (max-width: 960px) {
