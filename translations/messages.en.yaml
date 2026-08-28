@@ -17,7 +17,6 @@ nav:
 hero:
     title: 'End-to-end technology solutions that raise your productivity'
     lede: 'Intellicom LLC delivers complete solutions in information technology, telecommunications infrastructure, systems integration and Odoo-based ERP development for organisations of every size.'
-    cta_primary: 'Start your project'
     cta_secondary: 'Explore services'
 
 stats:
