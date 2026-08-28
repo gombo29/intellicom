@@ -2,7 +2,6 @@
 site:
     title: 'Intellicom LLC'
     company: 'Intellicom LLC'
-    slogan: 'Responsibility proven by flawless delivery, creativity by innovation'
     copyright: '© %year% Intellicom LLC. All rights reserved.'
     description: 'Intellicom LLC — complete solutions in information technology, telecommunications infrastructure, systems integration and Odoo-based ERP.'
 
@@ -115,9 +114,8 @@ partners:
 
 contact:
     title: "Let's start your project today"
-    lede: 'We assess your needs and provide the first consultation and proposal free of charge.'
-    cta_email: 'Send an email'
-    cta_call: 'Call us now'
+    lede: 'We assess your needs and provide the first consultation and assistance free of charge.'
+    cta_email: 'Send a request'
     label_address: 'ADDRESS'
     label_email: 'EMAIL'
     address: '11th floor, Altan Joloo Tower,<br>3rd khoroo, Sukhbaatar District,<br>Ulaanbaatar, Mongolia'
